@@ -22,3 +22,5 @@ elif sys.argv[1] == "histogram":
 elif sys.argv[1] == "vars":
 	bandit = hyperopt.Bandit(expr=space, do_checks=False)
 	hyperopt.plotting.main_plot_vars(trials, bandit=bandit, colorize_best=5)
+elif sys.argv[1] == "best":
+	print trials.best_trial

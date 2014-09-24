@@ -1,6 +1,6 @@
 EXPKEY=test0
 all:
-	echo "make {server|client|show}"
+	echo "make {server|client|show|best}"
 
 server:
 	python search.py search $(EXPKEY)
@@ -12,6 +12,9 @@ show:
 	python search.py history $(EXPKEY)
 	python search.py histogram $(EXPKEY)
 	python search.py vars $(EXPKEY)
+
+best:
+	python search.py best $(EXPKEY)
 
 clean:
 	find -type d -name '????????????????????????' -exec rm -r {} \;
